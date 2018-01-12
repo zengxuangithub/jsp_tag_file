@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+ 
+ 
+
+ 
+  
+  
+  <jsp-config>
+  	<jsp-property-group>
+  	
+  		<!-- 表示对哪些文件进行配置 -->
+  		<url-pattern>/test/*</url-pattern>
+  	
+  		
+  		<!-- 忽略表达式  如果设置为true 则会原封不动直接输出表达式内容 -->
+  		<el-ignored>true</el-ignored>
+  		<!-- 页面编码字符集  相当于<@ page pageEncoding="UTF-8"> 的设置 -->
+  		<page-encoding>UTF-8</page-encoding>
+  		
+  		<!-- 不 允许使用java 脚本吗-->
+  		
+  		<!-- 如果设置不允许   该页面会跳转tomcat报错页面  显示  jsp:expression  are disallowed here. -->
+  		<scripting-invalid>true</scripting-invalid>
+  		
+  		<!-- 隐式导入页面头  后缀名为.jspf--> 
+  		<include-prelude>/inc/top.jspf</include-prelude>
+  		
+  		
+  		<!-- 隐式导入页面底部缀名为.jspf--> 
+  		<include-coda>/inc/bottom.jspf</include-coda>
+  	</jsp-property-group>
+  	
+  	
+  	<jsp-property-group>
+  	
+  	
+  		<url-pattern>*.jsp</url-pattern>
+  	
+  		
+  		
+  		<el-ignored>true</el-ignored>
+  		
+  		<page-encoding>UTF-8</page-encoding>
+  		
+  		
+  		<scripting-invalid>false</scripting-invalid>
+  		
+  	
+  	
+  	</jsp-property-group>
+  	
+  	
+  	<jsp-property-group>
+  	
+  	
+  		<url-pattern>/inc/*</url-pattern>
+  	
+  		
+  		
+  		<el-ignored>false</el-ignored>
+  		
+  		<page-encoding>UTF-8</page-encoding>
+  		
+  		
+  		<scripting-invalid>true</scripting-invalid>
+  		
+  	
+  		
+  	</jsp-property-group>
+  </jsp-config>
+</web-app>
